@@ -2,15 +2,19 @@
 <nav class="navbar">
     <div class="container-grid">
         <div class="flex-row" style="margin: 0.5ch;">
-            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" id="pira-top-left" class="svelte-wywcqo">
-            <circle cx="12" cy="12" r="11" fill="currentColor"/>
-            <circle cx="12" cy="12" r="5" fill="#d7d7d7"/>
-            </svg>
+            <a href="{{ .Site.BaseURL }}">
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" id="pira-top-left" class="svelte-wywcqo">
+                <circle cx="12" cy="12" r="11" fill="#3B3533"/>
+                <circle cx="12" cy="12" r="5" fill="#d7d7d7"/>
+                </svg>
+            </a>
         </div>
         <div class="flex-row">
             <p style="margin: 0"><span>ramzyalamine.com</span></p>
             <p style="margin: 0"><span>made by <a href="{{ .Site.BaseURL }}">rmz53</a>, 2025.</span></p>
         </div>
+        <div class="flex-row">
+            <p style="margin: 1.5ch;"><span>{{ now.Format "Jan 2, 2006" }}</span></p>
+        </div>
     </div>
 </nav>
-

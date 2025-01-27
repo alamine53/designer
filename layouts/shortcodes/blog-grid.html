@@ -5,7 +5,7 @@
             <a href="{{ .Permalink }}" class="text-decoration-none">
                 <div class="card h-100">
                     <div class="card-body">
-                        <p class="card-text">{{ .Date.Format "2006-01-02" }}</p>
+                        <a class="card-date">{{ .Date.Format "2006-01-02" }}</a>
                         <h4 class="card-title">{{ .Title }}</h4>
                         {{ with .Description }}
                         <p class="card-text">{{ . }}</p>

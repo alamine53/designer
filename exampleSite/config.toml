@@ -9,14 +9,14 @@ math = false          # enable KaTeX (https://katex.org/) globally
 googleAnalytics = ""  # add your tracking id
 
 [params]
-  author = "Ramzy Al-Amine"
-  description = "A simple monospaced resume theme for Hugo."
+  author = "John Doe"
+  description = "Designer and newspaper editor in chief"
   favicon = "favicon.ico"  # path to a .ico to use as favicon
   logo = ""  # url or path to a logo to put in the header
 
   [params.footer]
     text = "By Ramzy Al-Amine"
-    url = "https://github.com/alamine53/hugo-theme-designer"
+    url = "https://github.com/alamine53/designer"
   
   [params.style]  # appearance options (can be omitted)
         

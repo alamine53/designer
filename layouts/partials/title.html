@@ -1,3 +1,9 @@
 <div class="container">
-    <h1>{{ .Site.Params.author }}, {{ .Site.Params.description }}</h1>
+    <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem; align-items: center;">
+        <img src="/avatar.jpg" alt="Avatar" class="avatar" style="width: 80px; height: 80px;">
+        <div class="title-container">
+            <h1 style="margin: 0;">{{ .Site.Params.author }}</h1>
+            {{ partial "socialshare.html" . }}
+        </div>
+    </div>
 </div>
