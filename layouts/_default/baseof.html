@@ -1,0 +1,41 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+</style>
+
+<!DOCTYPE html>
+<html lang="{{ .Site.Params.lang }}">
+    {{ block "head" . }}
+        {{- partial "head.html" . -}}
+        {{ if or (.Params.math) (.Site.Params.math) }}
+            {{- partial "math.html" . -}}
+        {{ end }}
+    {{ end }}
+    
+    <body>
+        {{ block "header" . }}
+            {{- partial "header.html" . -}}
+        {{ end }}
+
+        {{ block "content" . }}
+            <div id="content">
+
+                {{- block "main" . }}{{- end }}
+            </div>
+        {{ end }}
+
+ 
+        {{ block "footer" . }}
+            {{- partial "footer.html" . -}}
+        {{ end }}
+
+        {{ if and (not hugo.IsServer) .Site.Data.consent }}
+            {{- partial "consent.html" . -}}
+        {{ end }}
+    </body>
+
+    {{ block "scripts" . }}
+        <script src="{{ "js/navbar.js" | relURL }}"></script>
+    {{ end }}
+</html>

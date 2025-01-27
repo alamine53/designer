@@ -1,0 +1,11 @@
+{{ define "main" }}
+<div class="container">
+    <div class="homepage-header">
+        {{- partial "title.html" . -}}
+        {{- partial "socialshare.html" . -}}
+    </div>
+    <div class="homepage-content">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

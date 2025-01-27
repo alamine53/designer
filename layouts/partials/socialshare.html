@@ -1,0 +1,107 @@
+{{/*  Config  */}}
+{{ $switches := (dict
+    "facebook" true
+    "twitter" false
+    "linkedin" true
+    "whatsapp" false
+    "substack" true
+    "soundcloud" false
+    "xing" false
+    "mail" true
+    "bluesky" true
+    "tumblr" true
+    "patreon" true
+    "github" true
+    "youtube" true
+    "instagram" true
+) }}
+<div class="container">
+
+    {{ if $switches.twitter }}
+    <li class="button">
+        <a href="https://twitter.com/{{ .Site.Params.twitter }}" class="text-decoration-none" >
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" class="icon" style="fill: rgb(var(--text-color));">
+                    <path d="M23.9 4.8c-.8.4-1.7.6-2.7.7 1-.6 1.7-1.5 2.1-2.6-.9.5-1.9.9-3 1.1-.9-.9-2.1-1.5-3.4-1.5-3 0-5.2 2.8-4.6 5.7C8.4 8.1 5 6.3 2.7 3.4 1.4 5.5 2 8.3 4.1 9.7c-.8-.1-1.5-.3-2.1-.6-.1 2.2 1.5 4.2 3.7 4.6-.7.2-1.4.2-2.1.1C4.2 15.7 6 17 8 17.1c-2 1.5-4.4 2.2-6.9 1.9 2.1 1.3 4.5 2.1 7.2 2.1 8.7 0 13.6-7.3 13.3-13.9.8-.7 1.6-1.5 2.3-2.4z"></path>
+                </svg> 
+                </span> 
+                Twitter
+        </a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.bluesky }}
+    <li class="button"> 
+        <a target="_blank" href="https://bsky.app/profile/{{ .Site.Params.bluesky }}" class="text-decoration-none" style="color: rgb(var(--text-color));">
+            <span >
+                <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" class="icon">
+                <path d="M12 11.23C11 9.3 8.27 5.68 5.75 3.9c-2.4-1.7-3.33-1.4-3.93-1.13-.7.32-.82 1.39-.82 2.02 0 .63.34 5.18.57 5.94.75 2.5 3.4 3.35 5.85 3.08l.38-.05-.38.05c-3.58.53-6.77 1.83-2.59 6.48 4.6 4.76 6.3-1.01 7.17-3.95.88 2.93 1.88 8.5 7.09 3.95 3.91-3.95 1.07-5.95-2.51-6.48a7.96 7.96 0 0 1-.38-.05l.38.05c2.44.27 5.1-.58 5.85-3.08.22-.77.57-5.3.57-5.94 0-.63-.12-1.7-.82-2.02-.6-.28-1.53-.57-3.94 1.13-2.54 1.79-5.25 5.4-6.25 7.33Z"></path>
+            </svg> 
+            </span>
+            Bluesky
+        </a> 
+    </li>
+    {{ end }}
+
+    {{ if $switches.instagram }}
+    <li class="button">
+        <a target="_blank" href="https://instagram.com/{{ .Site.Params.instagram }}" class="text-decoration-none" style="color: rgb(var(--text-color));">
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 24 24" class="icon" ><path fill="rgb(var(--text-color))" d="M12 3.4c2.8 0 3.1 0 4.2.1 2.8.1 4.2 1.5 4.3 4.3.1 1.1.1 1.4.1 4.2 0 2.8 0 3.1-.1 4.2-.1 2.8-1.5 4.2-4.3 4.3-1.1.1-1.4.1-4.2.1-2.8 0-3.1 0-4.2-.1-2.9-.1-4.2-1.5-4.3-4.3-.1-1.1-.1-1.4-.1-4.2 0-2.8 0-3.1.1-4.2C3.6 5 5 3.6 7.8 3.5c1.1-.1 1.4-.1 4.2-.1zm0-1.9c-2.9 0-3.2 0-4.3.1-3.8.1-6 2.3-6.1 6.1-.1 1.1-.1 1.4-.1 4.3s0 3.2.1 4.3c.2 3.8 2.3 5.9 6.1 6.1 1.1.1 1.5.1 4.3.1s3.2 0 4.3-.1c3.8-.2 5.9-2.3 6.1-6.1.1-1.1.1-1.5.1-4.3s0-3.2-.1-4.3c-.2-3.8-2.3-5.9-6.1-6.1-1.1-.1-1.4-.1-4.3-.1zm0 5.1C9 6.6 6.6 9 6.6 12S9 17.4 12 17.4s5.4-2.4 5.4-5.4c0-3-2.4-5.4-5.4-5.4zm0 8.9c-1.9 0-3.5-1.6-3.5-3.5s1.6-3.5 3.5-3.5 3.5 1.6 3.5 3.5-1.6 3.5-3.5 3.5zm5.6-10.4c-.7 0-1.3.6-1.3 1.3s.6 1.3 1.3 1.3c.7 0 1.3-.6 1.3-1.3s-.6-1.3-1.3-1.3z"></path>
+            </svg>
+            </span>
+            Instagram
+        </a> 
+    </li>
+    {{ end }}
+
+    {{ if $switches.github }}
+    <li class="button">
+        <a target="_blank" href="https://github.com/{{ .Site.Params.github }}" class="text-decoration-none" style="color: rgb(var(--text-color));">
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 98 96"><path fill="rgb(var(--text-color))" fill-rule="evenodd" d="M48.85 0C21.84 0 0 22 0 49.22 0 70.97 14 89.39 33.4 95.9c2.43.49 3.32-1.06 3.32-2.37 0-1.14-.08-5.05-.08-9.12-13.59 2.93-16.42-5.87-16.42-5.87-2.18-5.7-5.42-7.17-5.42-7.17-4.45-3.01.33-3.01.33-3.01 4.93.32 7.52 5.05 7.52 5.05 4.37 7.5 11.4 5.38 14.23 4.07.4-3.18 1.7-5.38 3.08-6.6-10.84-1.14-22.25-5.38-22.25-24.28 0-5.38 1.94-9.78 5.02-13.2-.49-1.22-2.19-6.28.48-13.04 0 0 4.13-1.3 13.43 5.05a46.97 46.97 0 0 1 12.21-1.63 47 47 0 0 1 12.22 1.63c9.3-6.35 13.42-5.05 13.42-5.05 2.67 6.76.97 11.82.49 13.04a18.9 18.9 0 0 1 5.01 13.2c0 18.9-11.4 23.06-22.32 24.28 1.78 1.55 3.32 4.48 3.32 9.13 0 6.6-.08 11.9-.08 13.52 0 1.3.89 2.86 3.31 2.37a49.18 49.18 0 0 0 33.4-46.7C97.72 22 75.8 0 48.86 0z"></path>
+            </svg> 
+        </span>
+        GitHub
+        </a> 
+        </li>
+    {{ end }}
+    
+    {{ if $switches.youtube }}
+    <li class="button"> 
+        <a target="_blank" href="https://www.youtube.com/{{ .Site.Params.youtube }}" class="text-decoration-none" style="color: rgb(var(--text-color));">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24"><path fill-rule="evenodd" d="m 12,4.2996421 c 0,0 -6.8805198,1.295e-4 -8.59554,0.4601237 C 2.4573136,5.0133062 1.7136645,5.7569475 1.4601242,6.7041016 1.00013,8.4191142 1.0000005,12 1.0000005,12 c 0,0 1.295e-4,3.58087 0.4601237,5.295897 0.2535403,0.947147 0.9971894,1.69084 1.9443358,1.944337 C 5.1194802,19.700254 12,19.700358 12,19.700358 c 0,0 6.880589,-1.04e-4 8.595539,-0.460124 0.947148,-0.253497 1.690841,-0.99719 1.944336,-1.944337 C 22.999895,15.58087 23,12 23,12 23,12 22.9981,8.4191142 22.539875,6.7041016 22.286379,5.7569475 21.542686,5.0133062 20.595539,4.7597658 18.880589,4.2997716 12,4.2996421 12,4.2996421 Z M 9.7978517,8.700358 15.512694,12 9.7978517,15.299641 Z" clip-rule="evenodd"></path></svg> YouTube</a>
+    </li>
+    {{ end }}
+
+    {{ if $switches.substack }}
+    <li class="button"> 
+        <a target="_blank" href="https://substack.com/profile/{{ .Site.Params.substack }}" class="text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" class="icon" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 448 511.471"><path d="M0 0h448v62.804H0V0zm0 229.083h448v282.388L223.954 385.808 0 511.471V229.083zm0-114.542h448v62.804H0v-62.804z"/></svg>
+            Substack
+        </a>
+    </li>
+    {{ end}}
+    
+    {{ if $switches.linkedin }}
+    <li class="button"> 
+        <a target="_blank" href="https://www.linkedin.com/in/{{ .Site.Params.linkedin }}" class="text-decoration-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"  class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+            LinkedIn
+        </a>
+    </li>
+    {{ end}}
+
+    {{ if $switches.soundcloud }}
+    <li class="button"> 
+        <a target="_blank" href="https://soundcloud.com/{{ .Site.Params.soundcloud }}" class="text-decoration-none"></a>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="100" height="100" viewBox="0 0 48 48">
+            <path d="M10 33.018c.596 0 1.265 0 2 0V19.041c-1.11 1.001-1.699 2.212-2 3.121V33.018zM21 18.105c-.675-.316-1.752-.715-3-.837v15.749c.976 0 1.98 0 3 0V18.105zM14 33.018c.943 0 1.95 0 3 0V17.24c-1.173.03-2.171.23-3 .558V33.018zM4 23.953c-1.178.896-2 2.35-2 4.039 0 1.586.795 2.987 2 3.905V23.953zM40.995 22.016c-1.444 0-2.283.521-2.283.521s-.839-8.488-9.271-8.488c-4.906 0-6.83 2.704-7.441 3.897v15.071c8.825 0 18.297 0 18.297 0s5.869-.094 5.869-5.453C46.166 23.439 42.439 22.016 40.995 22.016zM8 23.1c-.395-.051-.842-.088-1.341-.088-.223 0-.441.037-.659.073v9.767c.423.104.861.166 1.311.166.151 0 .393 0 .689 0V23.1z"></path>
+            </svg>
+            Soundcloud
+        </a>
+    </li>
+    {{ end}}
+</div>
