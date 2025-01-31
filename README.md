@@ -1,16 +1,6 @@
-# Researcher
+# Designer
 
-A simple monospaced resume theme for Hugo. It was ported from Jekyll theme
-[ankitsultana/researcher](https://github.com/ankitsultana/researcher) and [ojroques/hugo-researcher](https://github.com/ojroques/hugo-researcher)
-
-## Typeface
-Available fonts:
-- Inconsolata (default) -> monospace, sans-serif, best in light format
-- Space Grotesk -> monospace, serief, best in medium
-- Inter -> Grotesk style, best in medium for headers
-- Barlow, sans-serif -> round, tight
-- Geist
-
+A simple monospaced resume theme for Hugo. It has originated from [ojroques/hugo-researcher](https://github.com/ojroques/hugo-researcher) and the design is inspired by [nezu.worl](https://nezu.world/)
 To add custom fonts, go to baseof.html in "layouts/default" and import the link at the top of the page, then edit config correspondingly. 
 
 ## Installation
@@ -19,17 +9,17 @@ This theme uses Sass to generate CSS files so make sure you have the
 
 Add the theme to your site's `themes` directory:
 ```bash
-git submodule add https://github.com/alamine53/hugo-theme-53.git themes/theme-53
+git submodule add https://github.com/alamine53/designer.git themes/designer
 ```
 
 Update the theme option in `config.toml`:
 ```toml
-theme = "theme-53"
+theme = "designer"
 ```
 
 ## Configuration
 A self-explanatory configuration file is present in
-[exampleSite/config.toml](https://github.com/alamine53/hugo-theme-53/blob/master/exampleSite/config.toml),
+[exampleSite/config.toml](/exampleSite/config.toml),
 along the files of a demo website.
 
 ## Typeface
@@ -50,9 +40,7 @@ c & d
 \end{pmatrix}
 {{< /math >}}
 ```
-Check [this
-issue](https://github.com/alamine53/hugo-theme-53/issues/1#issuecomment-697247056)
-for more details.
+
 
 ## License
-[GPL-3.0 License](https://github.com/alamine53/hugo-theme-53/blob/master/LICENSE)
+[GPL-3.0 License](https://github.com/alamine53/designer/blob/master/LICENSE)
