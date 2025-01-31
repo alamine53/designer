@@ -29,10 +29,10 @@
         {{ block "footer" . }}
             {{- partial "footer.html" . -}}
         {{ end }}
-
+<!-- 
         {{ if and (not hugo.IsServer) .Site.Data.consent }}
             {{- partial "consent.html" . -}}
-        {{ end }}
+        {{ end }} -->
     </body>
 
     {{ block "scripts" . }}
