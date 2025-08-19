@@ -1,20 +1,5 @@
 {{/*  Config  */}}
-{{ $switches := (dict
-    "facebook" true
-    "twitter" false
-    "linkedin" true
-    "whatsapp" false
-    "substack" true
-    "soundcloud" false
-    "xing" false
-    "mail" true
-    "bluesky" true
-    "tumblr" true
-    "patreon" true
-    "github" true
-    "youtube" false
-    "instagram" true
-) }}
+{{ $switches := .Site.Params.socialShare }}
 <div class="container">
 
     {{ if $switches.twitter }}
