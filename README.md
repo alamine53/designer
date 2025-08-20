@@ -1,7 +1,7 @@
 # Designer
 
-A simple monospaced resume theme for Hugo. It has originated from [ojroques/hugo-researcher](https://github.com/ojroques/hugo-researcher) and the design is inspired by [nezu.worl](https://nezu.world/)
-To add custom fonts, go to baseof.html in "layouts/default" and import the link at the top of the page, then edit config correspondingly. 
+A simple, newspaper-styled theme for Hugo inspired by [ojroques/hugo-researcher](https://github.com/ojroques/hugo-researcher) and [nezu.world](https://nezu.world/)
+Import custom fonts by setting the `import` tag at the top of the baseof.html page in "layouts/default" and editing config correspondingly. 
 
 ## Installation
 This theme uses Sass to generate CSS files so make sure you have the
@@ -18,7 +18,7 @@ theme = "designer"
 ```
 
 ## Configuration
-A self-explanatory configuration file is present in
+A configuration file is present in
 [exampleSite/config.toml](/exampleSite/config.toml),
 along the files of a demo website.
 
