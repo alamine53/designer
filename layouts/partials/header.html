@@ -10,11 +10,13 @@
             </a>
         </div>
         <div class="flex-row">
-            <p style="margin: 0"><span>ramzyalamine.com</span></p>
-            <p style="margin: 0"><span>made by <a href="{{ .Site.BaseURL }}">rmz53</a>, 2025.</span></p>
+            <p style="margin: 0"><span>{{ .Site.Params.header.siteName | default .Site.BaseURL }}</span></p>
+            <p style="margin: 0"><span>made by <a href="{{ .Site.BaseURL }}">{{ .Site.Params.header.authorName | default .Site.Params.author }}</a>, {{ now.Format "2006" }}.</span></p>
         </div>
+        {{ if .Site.Params.header.showDate | default true }}
         <div class="flex-row">
             <p style="margin: 1.5ch;"><span>{{ now.Format "Jan 2, 2006" }}</span></p>
         </div>
+        {{ end }}
     </div>
 </nav>

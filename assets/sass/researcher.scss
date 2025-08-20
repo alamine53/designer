@@ -153,16 +153,82 @@ html, body {
     grid-gap: 1ch;
     grid-template-columns: 4ex 1fr auto;
     padding: 0.5em 20px;
+    align-items: center;
     
     @media screen and (max-width: 768px) {
         padding: 0.5em 15px;
         grid-gap: 0.8ch;
+        grid-template-columns: 3.5ex 1fr auto;
     }
     
     @media screen and (max-width: 480px) {
         padding: 0.5em 12px;
-        grid-gap: 0.5ch;
-        grid-template-columns: 3ex 1fr auto;
+        grid-gap: 0.3ch;
+        grid-template-columns: 2.5rem 1fr auto;
+    }
+    
+    .flex-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        min-width: 0;
+        
+        p {
+            margin: 0 !important;
+            line-height: 1.1;
+            width: 100%;
+            display: block !important;
+            flex-shrink: 0;
+            
+            &:first-child {
+                margin-bottom: 0.15rem !important;
+            }
+            
+            &:last-child {
+                margin-top: 0 !important;
+            }
+        }
+        
+        // Force stacking for the middle column specifically
+        &:nth-child(2) {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 0;
+            padding-left: 0.5rem;
+            
+            p {
+                clear: both;
+                float: none;
+                width: 100% !important;
+                display: block !important;
+                order: unset;
+                line-height: 0.9 !important;
+                margin: 0 !important;
+                
+                &:first-child {
+                    margin-bottom: -0.1rem !important;
+                }
+                
+                &:last-child {
+                    margin-top: -0.05rem !important;
+                }
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            p {
+                font-size: 0.85rem !important;
+                line-height: 1.0;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            p {
+                font-size: 0.8rem !important;
+                line-height: 1.0;
+            }
+        }
     }
 }
 
