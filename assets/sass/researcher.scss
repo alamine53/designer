@@ -12,7 +12,7 @@ $font-family: {{ .Param "style.fontFamily" | default "Inconsolata" }};
 $font-family-header: {{ .Param "style.fontFamilyHeader" | default "Helvetica, sans-serif" }};
 $font-size: {{ .Param "style.fontSize" | default "12pt" }};
 $letter-spacing: {{ .Param "style.letterSpacing" | default "0.0001em" }};
-$font-weight: {{ .Param "style.fontWeight" | default "600" }};
+$font-weight: {{ .Param "style.fontWeight" | default "700" }};
 
 // Margins
 $y-small: 0.5rem;
@@ -485,7 +485,7 @@ html, body {
     font-family: $font-family;
     font-size: 12pt;
     line-height: 1.2;
-    font-weight: 400;
+    font-weight: 500;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -515,10 +515,11 @@ html, body {
     }
 
     p {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 11pt;
         line-height: 1.4;
         margin-bottom: 1rem;
+        color: $black;
         
         @media screen and (max-width: 480px) {
             font-size: 10pt;
@@ -527,7 +528,7 @@ html, body {
     }
     h1, h2, h3, h4, h5, h6 {
         font-family: $font-family-header;      
-        font-weight: 600;
+        font-weight: 700;
         color: $black;
     }
     h1 {
