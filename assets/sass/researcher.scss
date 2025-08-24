@@ -96,8 +96,26 @@ html, body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 0;
+    gap: 0.3rem;
     
+    h1 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        font-weight: 600 !important;
+        margin-bottom: 0.2rem !important;
+        
+        @media screen and (max-width: 480px) {
+            font-size: 1.4rem !important;
+            line-height: 1.1;
+            margin-bottom: 0.1rem !important;
+        }
+        
+        @media screen and (max-width: 360px) {
+            font-size: 1.2rem !important;
+        }
+    }
 }
 
 .container {
@@ -327,12 +345,35 @@ html, body {
 
 .social-row {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: -0.1rem;
+    list-style: none;
+    padding: 0;
+    
+    li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    @media screen and (max-width: 480px) {
+        gap: 0.05rem;
+        margin-top: 0;
+    }
 }
 .icon {
     width: 15px;
     height: 15px;
+    
+    @media screen and (max-width: 480px) {
+        width: 12px;
+        height: 12px;
+    }
 }
 
 .button {
@@ -345,21 +386,34 @@ html, body {
     font-size: 0.9rem;
     color: #888888;
     margin-right: -0.3rem;
-    margin-bottom: 0.1rem;
+    margin-bottom: 0;
     background-color: #f5f5f5;
+    flex-shrink: 0;
+    vertical-align: baseline;
+    
+    @media screen and (max-width: 480px) {
+        height: 22px;
+        font-size: 0.75rem;
+        padding: 0rem 0.15rem;
+        margin-right: -0.25rem;
+    }
+    
     a {
         font-family: $font-family-header;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 0.9rem;
+        
+        @media screen and (max-width: 480px) {
+            font-size: 0.75rem;
+        }
     }
+    
     &:hover {
         border: 1px solid $black;
         position: relative;
         color: $black;
         fill: $black;
-
     }
-
 }
 
 #footer {
@@ -534,7 +588,8 @@ html, body {
     h1 {
         margin-top: 1.5rem;
         margin-bottom: 1rem;
-        font-size: 2.3rem;
+        font-size: 3.2rem;
+        font-weight: 700;
 
     }
     h2 {
